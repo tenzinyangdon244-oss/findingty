@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*
+ * Brand theme — change colours here and every page updates.
+ * Use them in classes as bg-background, text-ink, text-muted, text-accent, bg-pill.
+ */
+@theme {
+  --color-background: #fafaf8;
+  --color-ink: #000000;
+  --color-muted: #8a8a8a;
+  --color-accent: #1a1dd6;
+  --color-pill: #ececea;
+
+  /* Font variables are set by next/font in src/app/layout.tsx */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-title: var(--font-beth-ellen), cursive;
+
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-ink);
+}
